@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="정책셰프 김현성의 기고·인터뷰·보도·강연 아카이브. 소통, 민생경제, 디지털사회혁신, 글로벌 스탠다드 리더십.">
+<meta name="description" content="정책셰프 김현성의 기고·인터뷰·보도·강연 아카이브. 소통, 민생경제, 디지털사회혁신, 글로벌 스탠다드, 리더십.">
 <title>김현성 아카이브</title>
 <style>html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +27,7 @@
 .item h3{margin:0;font-size:16px;font-weight:600;line-height:1.55}
 .meta{display:flex;flex-wrap:wrap;gap:6px 12px;margin-top:6px;font-size:12px;color:var(--ink-soft)}
 .tag{font-weight:600}
-.tag.sotong{color:var(--teal)} .tag.minsaeng{color:var(--coral)} .tag.digital{color:var(--amber)} .tag.global{color:var(--ink)}
+.tag.sotong{color:var(--teal)} .tag.minsaeng{color:var(--coral)} .tag.digital{color:var(--amber)} .tag.global{color:var(--sky)} .tag.leader{color:var(--ink)}
 .todo{margin-top:28px;padding:16px 18px;background:var(--paper-2);font-size:14px;color:var(--ink-soft)}
 @media (max-width:640px){.item{grid-template-columns:1fr}.frow .fl{width:100%}}
 </style>
@@ -36,7 +36,7 @@
 <nav class="topnav" aria-label="섹션">
   <div class="wrap navin">
     <a class="brand" href="index.html">김현성</a>
-    <div class="links"><a href="index.html#ttam">이야기</a><a href="index.html#pillars">네 기둥</a><a href="archive.html" aria-current="page">아카이브</a><a href="index.html#bio">약력</a></div>
+    <div class="links"><a href="index.html#ttam">이야기</a><a href="index.html#pillars">점선면</a><a href="archive.html" aria-current="page">아카이브</a><a href="index.html#bio">약력</a></div>
   </div>
 </nav>
 
@@ -44,11 +44,11 @@
 <header class="arch-head">
   <div class="studio">식탁 · 기고 · 인터뷰 · 보도 · 강연</div>
   <h1>말하고 쓴 것들</h1>
-  <p>현장에서 건져 올린 생각을 네 개의 기둥으로 나눠 모았습니다. 기둥과 형식을 골라 보세요.</p>
+  <p>현장에서 건져 올린 생각을 다섯 개의 점으로 나눠 모았습니다. 점과 형식을 골라 보세요.</p>
 </header>
 
 <div class="filters">
-  <div class="frow" id="f-pillar"><span class="fl">기둥</span></div>
+  <div class="frow" id="f-pillar"><span class="fl">다섯 점</span></div>
   <div class="frow" id="f-type"><span class="fl">형식</span></div>
 </div>
 <div class="count" id="count" aria-live="polite"></div>
@@ -62,7 +62,7 @@
 </div>
 
 <script>
-const PILLARS={sotong:"소통",minsaeng:"민생경제",digital:"디지털사회혁신",global:"글로벌 스탠다드 리더십"};
+const PILLARS={sotong:"소통",minsaeng:"민생경제",digital:"디지털사회혁신",global:"글로벌 스탠다드",leader:"리더십"};
 const TYPES=["기고","인터뷰","보도","강연","책"];
 // [date, type, outlet, title, pillar]
 const ITEMS=[
@@ -84,11 +84,11 @@ const ITEMS=[
  ["2025.02.05","기고","광주매일신문","소상공인이 일어설 날","minsaeng"],
  ["2025.02.02","기고","무등일보","2025 AI 대전환","digital"],
  ["2025.01.17","기고","플레이광주","대전환을 통한 기준도시 광주","global"],
- ["2025.01.15","보도","광주경제진흥상생일자리재단","한국거버넌스 공공기관 거버넌스 수상","global"],
+ ["2025.01.15","보도","광주경제진흥상생일자리재단","한국거버넌스 공공기관 거버넌스 수상","leader"],
  ["2024.11.07","보도","광주경제진흥상생일자리재단","소상공인 라이브커머스 라라라 프로젝트","digital"],
  ["2024.10.07","보도","광주경제진흥상생일자리재단","소상공인 정책의견 국회 전달","sotong"],
  ["2024.10.02","보도","광주경제진흥상생일자리재단","광산 QR선언","digital"],
- ["2024.08.23","인터뷰","시사위크","지역이 리더십을 가질 기회","global"],
+ ["2024.08.23","인터뷰","시사위크","지역이 리더십을 가질 기회","leader"],
  ["2024.08.14","보도","광주경제진흥상생일자리재단","배민 탈퇴 1,000인 디지털 서명운동 개시","minsaeng"],
  ["2024.08.07","인터뷰","광주일보","디지털 경제 전환, 소상공인이 글로벌 경쟁력을 갖출 기회","digital"],
  ["2024.07.22","기고","광주매일신문","디지털 대전환 시대, 세계인이…","global"],

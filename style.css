@@ -1,6 +1,6 @@
 :root{
   --paper:#F5F8F7; --paper-2:#E9F0EE; --ink:#10302E; --ink-soft:#4E6563; --rule:#CFDCD9;
-  --teal:#136B66; --coral:#D95B43; --amber:#D9962B;
+  --teal:#136B66; --coral:#D95B43; --amber:#D9962B; --sky:#2E6FA3;
   --display:"Hahmlet","Nanum Myeongjo",serif;
   --body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,monospace;
@@ -8,12 +8,12 @@
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     --paper:#0E1816; --paper-2:#16231F; --ink:#E4EEEC; --ink-soft:#9DB3AF; --rule:#2A3B38;
-    --teal:#5BBFB5; --coral:#F07E66; --amber:#EDB250; color-scheme:dark;
+    --teal:#5BBFB5; --coral:#F07E66; --amber:#EDB250; --sky:#7DB3DD; color-scheme:dark;
   }
 }
 :root[data-theme="dark"]{
   --paper:#0E1816; --paper-2:#16231F; --ink:#E4EEEC; --ink-soft:#9DB3AF; --rule:#2A3B38;
-  --teal:#5BBFB5; --coral:#F07E66; --amber:#EDB250; color-scheme:dark;
+  --teal:#5BBFB5; --coral:#F07E66; --amber:#EDB250; --sky:#7DB3DD; color-scheme:dark;
 }
 *{box-sizing:border-box}
 body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.75;word-break:keep-all;padding-inline:20px}
@@ -157,15 +157,38 @@ figcaption{font-size:13px;color:var(--ink-soft);margin-top:8px}
   .wide img{aspect-ratio:4/3}
 }
 
-/* pillars */
-.pillars{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule)}
-.pillar{background:var(--paper);padding:24px 22px;text-decoration:none;color:var(--ink);display:grid;gap:8px;align-content:start;transition:background .2s}
-.pillar:hover{background:var(--paper-2)}
-.pk{font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--teal)}
-.pillar:nth-child(2) .pk{color:var(--coral)}
-.pillar:nth-child(3) .pk{color:var(--amber)}
-.pillar h3{margin:0;font-family:var(--display);font-size:21px;line-height:1.4;text-wrap:balance}
-.pillar p{margin:0;font-size:15px;color:var(--ink-soft)}
-.pillar .sig{font-size:13px;color:var(--ink);border-top:1px dashed var(--rule);padding-top:10px;margin-top:4px}
+/* 점선면 */
+.dsm{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:32px;align-items:center;margin-bottom:36px}
+.star{width:100%;max-width:460px;height:auto;overflow:visible}
+.star .pent{fill:none;stroke:var(--rule);stroke-width:1.5;stroke-dasharray:4 5}
+.star .face{fill:var(--paper-2);fill-rule:nonzero}
+.star .line{fill:none;stroke:var(--ink);stroke-width:1.6;stroke-linejoin:round}
+.star text{font-family:var(--body);font-size:17px;font-weight:600;fill:var(--ink)}
+.star .node circle{stroke:var(--paper);stroke-width:4;transition:r .2s}
+.star .node:hover circle,.star .node:focus circle,.star .node.on circle{r:15}
+.star .node:hover text,.star .node.on text{fill:var(--coral)}
+.dsm-key{margin:0;display:grid;gap:14px}
+.dsm-key div{display:grid;grid-template-columns:44px 1fr;gap:12px;align-items:baseline}
+.dsm-key dt{font-family:var(--display);font-weight:800;font-size:28px;color:var(--teal);line-height:1}
+.dsm-key div:nth-child(2) dt{color:var(--coral)}
+.dsm-key div:nth-child(3) dt{color:var(--amber)}
+.dsm-key dd{margin:0;font-size:15px;color:var(--ink-soft)}
+.dsm-note{margin:6px 0 0;font-family:var(--display);font-weight:600;font-size:18px;color:var(--ink)}
+.pillars{display:grid;gap:0;border-top:1px solid var(--rule)}
+.pillar{display:grid;grid-template-columns:170px 1fr;gap:6px 24px;padding-block:20px;border-bottom:1px solid var(--rule);text-decoration:none;color:var(--ink);transition:background .2s}
+.pillar:hover,.pillar.on{background:var(--paper-2)}
+.pk{font-family:var(--mono);font-size:13px;letter-spacing:.04em;padding-top:4px;padding-left:6px}
+.pillar[data-k="sotong"] .pk{color:var(--teal)}
+.pillar[data-k="minsaeng"] .pk{color:var(--coral)}
+.pillar[data-k="digital"] .pk{color:var(--amber)}
+.pillar[data-k="global"] .pk{color:var(--sky)}
+.pillar[data-k="leader"] .pk{color:var(--ink)}
+.pillar h3{margin:0 0 4px;font-family:var(--display);font-size:20px;line-height:1.4;text-wrap:balance}
+.pillar p{margin:0;font-size:15px;color:var(--ink-soft);max-width:60ch}
+.pillar .sig{font-size:13px;color:var(--ink);margin-top:8px}
 .pillar .sig::after{content:" →";color:var(--coral)}
-@media (max-width:760px){.pillars{grid-template-columns:1fr}}
+@media (max-width:760px){
+  .dsm{grid-template-columns:1fr}
+  .star{max-width:360px;margin-inline:auto}
+  .pillar{grid-template-columns:1fr}
+}
