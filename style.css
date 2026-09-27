@@ -208,3 +208,6 @@ figcaption{font-size:13px;color:var(--ink-soft);margin-top:8px}
 @media (max-width:480px){.links{gap:12px}.links a{font-size:13px}}
 @media (max-width:420px){.links{gap:10px}.links a{font-size:12.5px}.brand{font-size:15px}}
 .lists + .said{margin-top:18px}
+
+.star text .m{font-size:14.5px;font-weight:600;fill:var(--coral)}
+.pk b{display:block;font-family:var(--display);font-weight:800;font-size:19px;letter-spacing:0;margin-top:4px;color:var(--ink)}
