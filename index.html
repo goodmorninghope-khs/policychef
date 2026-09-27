@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="뜻과 땀으로 때를 짓는 정책셰프 김현성. 『소상공인을 버린 AI』 저자, 디지털 실학자.">
+<meta property="og:title" content="정책셰프 김현성">
+<meta property="og:description" content="뜻과 땀으로 때를 짓는 정책셰프. 『소상공인을 버린 AI』 저자.">
+<meta property="og:image" content="img/hero.jpg">
+<meta property="og:type" content="profile">
+<title>정책셰프 김현성</title>
+<style>html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@400;600;800&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+:root{
+  --paper:#F5F8F7; --paper-2:#E9F0EE; --ink:#10302E; --ink-soft:#4E6563; --rule:#CFDCD9;
+  --teal:#136B66; --coral:#D95B43; --amber:#D9962B;
+  --display:"Hahmlet","Nanum Myeongjo",serif;
+  --body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0E1816; --paper-2:#16231F; --ink:#E4EEEC; --ink-soft:#9DB3AF; --rule:#2A3B38;
+    --teal:#5BBFB5; --coral:#F07E66; --amber:#EDB250; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0E1816; --paper-2:#16231F; --ink:#E4EEEC; --ink-soft:#9DB3AF; --rule:#2A3B38;
+  --teal:#5BBFB5; --coral:#F07E66; --amber:#EDB250; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.75;word-break:keep-all;padding-inline:20px}
+.wrap{max-width:880px;margin-inline:auto}
+a{color:var(--teal)}
+:focus-visible{outline:2px solid var(--coral);outline-offset:3px}
+
+/* hero */
+.hero{padding-block:72px 56px;display:grid;gap:28px}
+.studio{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--ink-soft);text-transform:uppercase}
+.hero h1{font-family:var(--display);font-weight:800;font-size:clamp(36px,7.4vw,68px);line-height:1.18;margin:0;text-wrap:balance;letter-spacing:-.01em}
+.hero h1 .chef{color:var(--coral);white-space:nowrap}
+.hero h1 .name{display:block;font-size:.5em;font-weight:600;color:var(--teal);margin-top:14px}
+.hands{display:flex;flex-wrap:wrap;gap:10px 28px;font-size:15px;color:var(--ink-soft)}
+.hands b{color:var(--ink);font-weight:600}
+.hands span::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--amber);margin-right:9px;vertical-align:2px}
+.hands span:nth-child(2)::before{background:var(--teal)}
+
+/* origin quote */
+.origin{border-block:1px solid var(--rule);padding-block:44px;display:grid;gap:18px}
+.origin .when{font-family:var(--mono);font-size:12px;color:var(--ink-soft);letter-spacing:.08em}
+.origin blockquote{margin:0;font-family:var(--display);font-size:clamp(22px,3.6vw,30px);line-height:1.5;font-weight:600;text-wrap:balance}
+.origin blockquote em{font-style:normal;color:var(--coral)}
+.origin p{margin:0;max-width:62ch;color:var(--ink-soft)}
+
+/* sections */
+section.part{padding-block:64px 8px}
+.part-head{display:grid;grid-template-columns:auto 1fr;gap:6px 20px;align-items:end;margin-bottom:32px}
+.glyph{grid-row:span 2;font-family:var(--display);font-weight:800;font-size:76px;line-height:.9;color:var(--teal)}
+.part:nth-of-type(2) .glyph{color:var(--coral)}
+.part:nth-of-type(3) .glyph{color:var(--amber)}
+.part-head .label{font-family:var(--mono);font-size:12px;letter-spacing:.12em;color:var(--ink-soft)}
+.part-head h2{font-family:var(--display);font-size:clamp(22px,3.4vw,28px);margin:0;line-height:1.35;text-wrap:balance}
+
+/* timeline scenes */
+.scenes{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.scene{display:grid;grid-template-columns:118px 1fr;gap:4px 24px;padding-block:22px;border-top:1px solid var(--rule)}
+.scene:last-child{border-bottom:1px solid var(--rule)}
+.yr{font-family:var(--mono);font-size:13px;color:var(--teal);font-variant-numeric:tabular-nums;padding-top:4px}
+.yr small{display:block;color:var(--ink-soft);font-family:var(--body);font-size:12px;margin-top:2px}
+.scene h3{margin:0 0 4px;font-size:18px;font-weight:600;line-height:1.5}
+.scene p{margin:0;color:var(--ink-soft);max-width:60ch}
+.recipe{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:10px;font-size:13px}
+.recipe span{color:var(--ink)}
+.recipe i{font-style:normal;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--amber);margin-right:6px}
+.scene.fail h3::after{content:"징비";font-size:11px;font-weight:600;color:var(--coral);border:1px solid var(--coral);border-radius:3px;padding:0 6px;margin-left:10px;vertical-align:3px}
+
+/* book */
+.book{display:grid;grid-template-columns:minmax(0,200px) 1fr;gap:36px;align-items:start}
+.cover{aspect-ratio:2/3;max-width:100%;background:var(--teal);color:#F5F8F7;padding:22px 18px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:6px 8px 0 var(--paper-2)}
+.cover .t{font-family:var(--display);font-weight:800;font-size:25px;line-height:1.3}
+.cover .s{font-size:11px;line-height:1.5;opacity:.85}
+.cover .a{font-family:var(--mono);font-size:11px;letter-spacing:.1em}
+.book-body p{margin:0 0 14px;max-width:60ch}
+.axes{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:22px}
+.axes div{background:var(--paper);padding:16px}
+.axes b{font-family:var(--display);font-size:22px;display:block;color:var(--teal)}
+.axes div:nth-child(2) b{color:var(--coral)}
+.axes div:nth-child(3) b{color:var(--amber)}
+.axes span{font-size:13px;color:var(--ink-soft);line-height:1.6;display:block;margin-top:4px}
+.shelf{margin-top:22px;font-size:14px;color:var(--ink-soft)}
+.shelf b{color:var(--ink);font-weight:600}
+
+/* now */
+.now{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 36px}
+.now div{border-top:2px solid var(--ink);padding-top:14px}
+.now .k{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--ink-soft)}
+.now h3{margin:4px 0 6px;font-size:18px;font-weight:600}
+.now p{margin:0;color:var(--ink-soft);font-size:15px}
+
+/* footer */
+footer{margin-top:80px;padding-block:40px 56px;border-top:1px solid var(--rule);display:grid;gap:10px}
+footer .sig{font-family:var(--display);font-size:24px;font-weight:600}
+footer .sig em{font-style:normal;color:var(--coral)}
+footer p{margin:0;color:var(--ink-soft);font-size:14px}
+
+@media (max-width:640px){
+  .hero{padding-block:48px 40px}
+  .scene{grid-template-columns:1fr}
+  .book{grid-template-columns:1fr}
+  .cover{max-width:180px}
+  .axes{grid-template-columns:1fr}
+  .now{grid-template-columns:1fr}
+  .glyph{font-size:60px}
+}
+
+/* nav */
+.topnav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule);margin-inline:-20px;padding-inline:20px}
+.navin{display:flex;justify-content:space-between;align-items:center;padding-block:12px}
+.brand{font-family:var(--display);font-weight:800;font-size:17px;color:var(--ink);text-decoration:none}
+.links{display:flex;gap:18px}
+.links a{color:var(--ink-soft);text-decoration:none;font-size:14px;font-weight:500}
+.links a:hover{color:var(--coral)}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* hero with photo */
+.hero{grid-template-columns:1.15fr 1fr;align-items:center;gap:36px}
+.hero-text{display:grid;gap:26px}
+.hero-photo{margin:0;position:relative}
+.hero-photo img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:62% 30%;filter:saturate(.9)}
+.hero-photo::after{content:"";position:absolute;inset:14px -14px -14px 14px;border:2px solid var(--coral);z-index:-1}
+/* numbers */
+.numbers{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--rule);border-block:1px solid var(--rule);margin:0 0 8px}
+.numbers div{background:var(--paper);padding:18px 14px}
+.numbers dt{font-family:var(--display);font-weight:800;font-size:clamp(22px,3vw,30px);color:var(--teal);font-variant-numeric:tabular-nums;line-height:1.2}
+.numbers div:nth-child(2) dt{color:var(--amber)}
+.numbers div:nth-child(4) dt{color:var(--coral)}
+.numbers dd{margin:4px 0 0;font-size:13px;color:var(--ink-soft);line-height:1.5}
+/* figures */
+figure{margin:0}
+figcaption{font-size:13px;color:var(--ink-soft);margin-top:8px}
+.wide img{display:block;width:100%;aspect-ratio:16/8;object-fit:cover;object-position:50% 40%}
+.clip{margin-top:16px;max-width:520px}
+.clip img{display:block;width:100%;border:1px solid var(--rule)}
+/* talks */
+.talks{display:grid;grid-template-columns:minmax(0,240px) 1fr;gap:32px;align-items:start;margin-top:48px;padding:28px;background:var(--paper-2)}
+.poster img{display:block;width:100%}
+.talk-list .label{font-family:var(--mono);font-size:12px;letter-spacing:.12em;color:var(--coral);margin-bottom:12px}
+.talk{display:grid;grid-template-columns:72px 1fr;gap:16px;padding-block:16px;border-top:1px solid var(--rule)}
+.talk .d{font-family:var(--display);font-weight:800;font-size:26px;line-height:1.1;color:var(--ink);font-variant-numeric:tabular-nums}
+.talk .d small{display:block;font-family:var(--body);font-weight:500;font-size:12px;color:var(--ink-soft);margin-top:4px}
+.talk h3{margin:0 0 4px;font-size:17px;font-weight:600}
+.talk p{margin:0;font-size:14px;color:var(--ink-soft)}
+/* bio */
+.bio{display:grid;grid-template-columns:minmax(0,180px) 1fr;gap:36px;align-items:start}
+.portrait{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
+.bio-cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.bio h3{font-size:13px;font-family:var(--mono);letter-spacing:.1em;color:var(--teal);margin:0 0 10px;font-weight:500}
+.bio ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.bio li{font-size:15px;line-height:1.5}
+.bio li span{display:block;font-size:12px;color:var(--ink-soft);font-family:var(--mono)}
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr}
+  .hero-photo{max-width:400px;margin-right:14px}
+  .numbers{grid-template-columns:repeat(2,1fr)}
+  .talks{grid-template-columns:1fr;padding:20px}
+  .poster{max-width:220px}
+  .bio{grid-template-columns:1fr}
+  .portrait{max-width:160px}
+  .bio-cols{grid-template-columns:1fr}
+  .wide img{aspect-ratio:4/3}
+}
+</style>
+
+</head>
+<body>
+<nav class="topnav" aria-label="섹션">
+  <div class="wrap navin">
+    <a class="brand" href="#top">김현성</a>
+    <div class="links"><a href="#ttam">땀</a><a href="#tteut">뜻</a><a href="#ttae">때</a><a href="#bio">약력</a></div>
+  </div>
+</nav>
+
+<div class="wrap" id="top">
+
+<header class="hero">
+  <div class="hero-text">
+    <div class="studio">뜻땀때 스튜디오 · Songs for Davids</div>
+    <h1>뜻과 땀으로 때를 짓는<br><span class="chef">정책셰프</span><span class="name">김현성</span></h1>
+    <div class="hands">
+      <span><b>디지털 실학자</b> · 현장에서 답을 찾는다</span>
+      <span><b>경험디자이너</b> · 새로운 연결, 다른 경험을 짓는다</span>
+    </div>
+  </div>
+  <figure class="hero-photo">
+    <img src="img/hero.jpg" alt="마이크를 들고 이야기하는 김현성" width="1000" height="667">
+  </figure>
+</header>
+
+<dl class="numbers">
+  <div><dt>27년</dt><dd>정책과 골목 현장</dd></div>
+  <div><dt>30억 건</dt><dd>올빼미버스를 만든 통화 데이터</dd></div>
+  <div><dt>5만 4천 명</dt><dd>함께 디지털 전환을 건넌 사장님</dd></div>
+  <div><dt>1,547명</dt><dd>배민 독립선언에 이름을 올린 사장님</dd></div>
+</dl>
+
+<div class="origin">
+  <div class="when">2025년 6월 · 광주 송정역 골목, 떡갈비집</div>
+  <blockquote>“소버린 AI요? 우린 그런 거 몰라요. 그냥 <em>소(상공인을) 버린</em> AI가 아니길 바랄 뿐이죠.”</blockquote>
+  <p>국가 AI 전략 회의를 마치고 들른 가게였다. 사장님의 농담 한 마디가 가슴에 박혔다. 고가도로 위에서는 AI 주권을 말하는데, 그 아래 골목에서는 전혀 다른 언어가 쓰이고 있었다. 한 권의 책은 거기서 시작됐다.</p>
+  <figure class="wide">
+    <img src="img/listen.jpg" alt="작은 식당 테이블에서 사람들의 이야기를 듣는 김현성" width="1000" height="667">
+    <figcaption>말하기 전에 먼저 듣는다. 답은 늘 테이블 건너편에 있었다.</figcaption>
+  </figure>
+</div>
+
+<section class="part" id="ttam">
+  <div class="part-head">
+    <div class="glyph">땀</div>
+    <div class="label">책 이전 · 27년의 현장</div>
+    <h2>질문을 들고 골목을 돌아다녔다</h2>
+  </div>
+  <ol class="scenes">
+    <li class="scene">
+      <div class="yr">광고인<small>금강기획 · 보건복지부</small></div>
+      <div>
+        <h3>금연광고 「자학」·「단절」</h3>
+        <p>담배를 끊으라고 말하지 않았다. 흡연을 스스로를 해치는 일로 보여줬다. 큰 화제가 됐고 상을 받았다. 메시지를 짓는 법을 여기서 배웠다.</p>
+      </div>
+    </li>
+    <li class="scene">
+      <div class="yr">2011–2017<small>서울특별시 디지털 보좌관</small></div>
+      <div>
+        <h3>올빼미버스</h3>
+        <p>심야에 집에 가지 못하는 사람들이 있었다. 통화 데이터를 뒤져 그들의 길을 찾았다. 데이터가 사람을 향할 때 무엇이 가능한지 처음 증명한 장면.</p>
+        <div class="recipe"><span><i>재료</i>심야 통화 데이터 30억 건</span><span><i>한 접시</i>심야 노동자의 귀갓길</span></div>
+      </div>
+    </li>
+    <li class="scene fail">
+      <div class="yr">서울시 시절<small>남방큰돌고래 방류</small></div>
+      <div>
+        <h3>제돌이, 너무 이른 판단</h3>
+        <p>성급한 말 한 마디로 일이 정치가 됐다. 그 순간은 힘들었다. 제돌이는 결국 바다로 돌아갔다. 실패도 기록해야 레시피가 된다. 자세한 과정은 『물음』에 적었다.</p>
+      </div>
+    </li>
+    <li class="scene">
+      <div class="yr">2020–2023<small>중소기업유통센터</small></div>
+      <div>
+        <h3>소담스퀘어 · 디지털 전환 교육</h3>
+        <p>코로나19 한복판, 5만 4천 명의 사장님과 디지털 전환을 함께 건넜다. 소담스퀘어라는 이름을 직접 지었다. 백 마디 이론보다 사장님 이야기 하나가 더 힘이 된다고 믿었다.</p>
+        <div class="recipe"><span><i>재료</i>사장님의 이야기</span><span><i>한 접시</i>소상공인 이야기를 담는 공간</span></div>
+      </div>
+    </li>
+    <li class="scene">
+      <div class="yr">2023–2025<small>광주경제진흥상생일자리재단</small></div>
+      <div>
+        <h3>배민 독립선언과 지산D소</h3>
+        <p>1,547명의 사장님이 플랫폼 탈퇴를 선언했다. “못살겠다 갈아타자.” 공공배달앱으로 옮겨 타는 캠페인을 이끌었다. 지역에서 만들고 디지털로 파는 지산D소, QR광주, 2조 7천억 원 규모의 지역 순환 구상도 이때 세웠다.</p>
+        <div class="recipe"><span><i>재료</i>1,547명의 선언</span><span><i>한 접시</i>골목이 스스로 도는 경제</span></div>
+        <figure class="clip">
+          <img src="img/column.jpg" alt="광주매일신문 시론 「공정한 배달을 외치다: 광주에서 시작된 연대」 지면" width="900" height="386">
+          <figcaption>광주매일신문 시론 「공정한 배달을 외치다」 · 2025.4.3</figcaption>
+        </figure>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<section class="part" id="tteut">
+  <div class="part-head">
+    <div class="glyph">뜻</div>
+    <div class="label">전환점 · 한 권으로 묶다</div>
+    <h2>현장의 땀을 한 권의 뜻으로</h2>
+  </div>
+  <div class="book">
+    <div class="cover" aria-label="책 표지">
+      <div class="t">소상공인을<br>버린 AI</div>
+      <div class="s">600만 다윗을 위한<br>디지털 권리장전</div>
+      <div class="a">김현성</div>
+    </div>
+    <div class="book-body">
+      <p>AI 시대, 소상공인은 버려지는 존재인가. 아니면 역사상 처음으로 주인이 될 기회인가. 이 책은 그 물음에 대한 답이다.</p>
+      <p>성공담만 적지 않았다. 꺼진 스크린, 실패한 공공앱도 적었다. 류성룡이 패배를 기록했듯이. 그리고 대안을 냈다. 디지털 권리장전 10대 권리와 소무(小務) 10조. 창작이 아니라 발견이다. 이미 어딘가에서 작동하는 정책들이다.</p>
+      <div class="axes">
+        <div><b>뜻 志</b><span>그늘 없는 소버린 AI. 무엇을 향하는가</span></div>
+        <div><b>땀 汗</b><span>서울에서 광주까지. 했다는 것으로 하겠다는 것을 증거한다</span></div>
+        <div><b>때 時</b><span>권리장전과 소무 10조. 나라가 못하면 나라도</span></div>
+      </div>
+      <p class="shelf">함께 읽을 책 <b>『72년생 김현성의 물음』</b> · <b>『넥스트 커머스』</b>(공저)</p>
+    </div>
+  </div>
+</section>
+
+<section class="part" id="ttae">
+  <div class="part-head">
+    <div class="glyph">때</div>
+    <div class="label">책 이후 · 지금 짓는 것</div>
+    <h2>버린 AI에서 부리는 AI로</h2>
+  </div>
+  <div class="now">
+    <div>
+      <div class="k">2026.8 —</div>
+      <h3>중랑구 정책보좌관</h3>
+      <p>책에 쓴 말을 행정으로 옮기는 자리. 구청 안에서 AI 전환의 첫 불씨를 놓는다.</p>
+    </div>
+    <div>
+      <div class="k">진행 중</div>
+      <h3>중랑 AX 1번지</h3>
+      <p>공공이 먼저 AI를 부리는 법을 익힌다. 그래야 골목에도 건넬 수 있다.</p>
+    </div>
+    <div>
+      <div class="k">자문</div>
+      <h3>국가인공지능전략위원회</h3>
+      <p>고가도로 위의 회의실에 골목의 언어를 들고 간다.</p>
+    </div>
+    <div>
+      <div class="k">집필 중</div>
+      <h3>『소상공인이 부리는 AI』</h3>
+      <p>그늘 없는 AI 기준국가. 골목에서 나라로, 나라에서 세계로. 담론과 골목 사이에 다리를 놓는 후속작.</p>
+    </div>
+  </div>
+  <div class="talks">
+    <figure class="poster">
+      <img src="img/sodam.jpg" alt="소상공인 지식배움터 명사 초청 토크콘서트 소담소담 포스터" width="620" height="877">
+    </figure>
+    <div class="talk-list">
+      <div class="label">다가오는 강연</div>
+      <div class="talk">
+        <div class="d">9.30<small>수</small></div>
+        <div><h3>소담소담 명사 초청 토크콘서트</h3><p>소상공인 지식배움터. 소상공인을 버린 AI에서 소상공인이 부리는 AI로.</p></div>
+      </div>
+      <div class="talk">
+        <div class="d">10.1<small>목</small></div>
+        <div><h3>중랑구 직원 특강</h3><p>공공이 먼저 AI를 부려야 골목에 건넬 수 있다.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="part" id="bio">
+  <div class="part-head">
+    <div class="glyph">력</div>
+    <div class="label">약력</div>
+    <h2>걸어온 자리</h2>
+  </div>
+  <div class="bio">
+    <img class="portrait" src="img/portrait.jpg" alt="김현성 프로필 사진" width="520" height="669">
+    <div class="bio-cols">
+      <div>
+        <h3>지금</h3>
+        <ul>
+          <li>중랑구 정책보좌관 <span>2026–</span></li>
+          <li>국가인공지능전략위원회 자문위원</li>
+          <li>뜻땀때 스튜디오 대표</li>
+        </ul>
+      </div>
+      <div>
+        <h3>지나온 곳</h3>
+        <ul>
+          <li>광주경제진흥상생일자리재단 대표이사 <span>2023–2025</span></li>
+          <li>중소기업유통센터 소상공인디지털본부장 <span>2020–2023</span></li>
+          <li>서울특별시 디지털 보좌관 <span>2011–2017</span></li>
+          <li>금강기획 광고 AE</li>
+        </ul>
+      </div>
+      <div>
+        <h3>쓴 책</h3>
+        <ul>
+          <li>『소상공인을 버린 AI』 <span>2쇄</span></li>
+          <li>『72년생 김현성의 물음』</li>
+          <li>『넥스트 커머스』 <span>공저</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="sig">뜻과 땀으로 짓는 <em>때</em></div>
+  <p>뜻땀때 스튜디오 · 뉴스레터 「뜻땀때 소포」</p>
+  <p>© 2026 김현성</p>
+</footer>
+
+</div>
+</body>
+</html>
