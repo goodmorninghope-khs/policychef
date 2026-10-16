@@ -350,3 +350,25 @@ textarea.f-field{min-height:130px;resize:vertical}
 #talks .talk-list .label{font-family:var(--body);font-weight:600;letter-spacing:.04em}
 #talks .talks{grid-template-columns:minmax(0,200px) 1fr}
 @media (max-width:900px){.land-tag{max-width:none}}
+
+/* 유튜브 */
+.social-yt{display:inline-flex;align-items:center;gap:8px;color:#FF0000;text-decoration:none;font-size:14px;font-weight:600}
+.social-yt span{color:var(--ink)}
+.social-yt:hover{opacity:.7}
+.yt-card{display:flex;align-items:center;gap:20px;background:var(--paper-2);border-radius:18px;padding:28px 32px;text-decoration:none;color:var(--ink);transition:transform .25s}
+.yt-card:hover{transform:translateY(-3px)}
+.yt-logo{width:64px;height:64px;border-radius:16px;background:#FF0000;color:#fff;display:grid;place-items:center;flex-shrink:0}
+.yt-text{flex:1;display:grid;gap:2px}
+.yt-k{font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--ink-soft)}
+.yt-text strong{font-family:var(--display);font-weight:800;font-size:clamp(24px,3.6vw,32px);letter-spacing:-.02em;line-height:1.2}
+.yt-cta{flex-shrink:0;background:var(--coral);color:#fff;border-radius:999px;padding:12px 24px;font-size:14px;font-weight:600}
+.foot-yt{color:#FF0000;display:flex}
+.foot-yt:hover{opacity:.7}
+@media (max-width:640px){.yt-card{flex-wrap:wrap;padding:22px 20px}.yt-cta{width:100%;text-align:center}}
+.socials{display:inline-flex;align-items:center;gap:18px}
+.social-fb{display:inline-flex;align-items:center;gap:8px;color:#1877F2;text-decoration:none;font-size:14px;font-weight:600}
+.social-fb span{color:var(--ink)}
+.social-fb:hover{opacity:.7}
+.foot-social{display:flex;align-items:center;gap:16px}
+.foot-fb{color:#1877F2;display:flex}
+.foot-fb:hover{opacity:.7}
