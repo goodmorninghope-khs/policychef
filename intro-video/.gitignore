@@ -1,0 +1,6 @@
+fonts/
+재료/
+src/
+out/*
+!out/*.mp4
+canvas/
