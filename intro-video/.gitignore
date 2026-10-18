@@ -4,3 +4,5 @@ src/
 out/*
 !out/*.mp4
 canvas/
+sf2/
+_글꼴_가변원본/
