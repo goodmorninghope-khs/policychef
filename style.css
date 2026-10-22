@@ -382,3 +382,13 @@ textarea.f-field{min-height:130px;resize:vertical}
 .video{margin-bottom:20px}
 .video .frame{position:relative;aspect-ratio:16/9;background:var(--paper-2);border-radius:14px;overflow:hidden}
 .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* book cover photo */
+.cover-photo{margin:0;max-width:100%}
+.cover-photo img{display:block;width:100%;height:auto;mix-blend-mode:multiply}
+@media (max-width:720px){.cover-photo{max-width:220px}}
+
+/* contact fallback */
+.form-alt{margin:14px 0 0;font-size:13px;color:var(--ink-soft);text-align:center}
+.form-alt a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+.talk h3 small{font-family:var(--mono);font-size:11px;font-weight:500;color:var(--ink-soft);margin-left:6px;letter-spacing:.08em}
