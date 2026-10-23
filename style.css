@@ -420,3 +420,5 @@ textarea.f-field{min-height:130px;resize:vertical}
   .band figure:nth-child(n+6){display:none}
   .wall{columns:2}
 }
+.ad-film{margin-top:16px;max-width:560px}
+.ad-film video{display:block;width:100%;height:auto;aspect-ratio:4/3;background:#000}
