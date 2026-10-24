@@ -465,3 +465,12 @@ textarea.f-field{min-height:130px;resize:vertical}
 
 /* 시장님과 함께한 사진은 흑백으로 */
 img[src*="img/seoul-"],img[src="img/fb-seoul-cheongchaek.jpg"],img[src="img/cert/seoul-damyang-mou-2015.jpg"]{filter:grayscale(1)}
+
+/* book card */
+.bookcard{display:grid;grid-template-columns:150px 1fr;gap:20px;align-items:start;margin:18px 0;padding:18px;background:var(--paper-2);border-radius:14px}
+.bookcard img{display:block;width:100%;height:auto;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+.bookcard .k{font-family:var(--mono);font-size:11px;color:var(--teal);letter-spacing:.06em}
+.bookcard h4{margin:6px 0 2px;font-family:var(--display);font-size:20px}
+.bookcard .sub{margin:0 0 10px;font-size:14px;color:var(--coral)}
+.bookcard p{margin:0 0 8px;font-size:14.5px;line-height:1.7}
+@media (max-width:560px){.bookcard{grid-template-columns:110px 1fr;gap:14px;padding:14px}}
