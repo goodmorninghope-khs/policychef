@@ -458,3 +458,7 @@ textarea.f-field{min-height:130px;resize:vertical}
 .row figure{margin:0;flex:var(--r,1) 1 0;min-width:0}
 .row img{display:block;width:100%;height:auto;border:1px solid var(--rule)}
 .row figcaption{margin-top:6px;font-size:12px;line-height:1.5;color:var(--ink-soft)}
+.wall.certs{columns:auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:14px 10px;margin-bottom:32px}
+.wall.certs figure{margin:0;min-width:0}
+.wall.certs figcaption{overflow-wrap:anywhere}
+.wall.certs img{aspect-ratio:3/4;object-fit:contain;background:var(--paper-2,#f3f1ec);border:1px solid var(--rule)}
