@@ -447,3 +447,8 @@ textarea.f-field{min-height:130px;resize:vertical}
 .people figcaption{margin-top:8px;font-size:13px;line-height:1.5;color:var(--ink-soft)}
 .people figcaption b{display:block;font-family:var(--display);font-size:18px;color:var(--ink)}
 @media (max-width:640px){.people{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* intro film */
+.intro-film{margin:8px 0 40px}
+.intro-film .frame video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#000}
+.intro-film figcaption{margin-top:8px;font-size:13px;color:var(--ink-soft)}
