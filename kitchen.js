@@ -612,6 +612,19 @@ function buildChef(){
   mesh(new THREE.BoxGeometry(.46,.8,.02),[apM,apM,apM,apM,M('#fff',{map:at,roughness:.85}),apM],body,{y:1.02,z:.3,rx:-.03});
   [-1,1].forEach(s=>mesh(new THREE.BoxGeometry(.035,.3,.015),apM,body,{x:s*.165,y:1.52,z:.235,rz:s*.3,rx:-.45}));
   mesh(new THREE.TorusGeometry(.3,.013,6,32),apM,body,{y:.98,rx:Math.PI/2,s:[1.02,.9,1]});
+  // 소품: 이름표, 앞치마에 꽂은 펜, 어깨에 걸친 행주
+  const nt=tex(192,80,(g,w,h)=>{g.fillStyle='#FFFDF8';rr(g,2,2,w-4,h-4,10);g.fill();g.strokeStyle=C.teal;g.lineWidth=5;rr(g,6,6,w-12,h-12,8);g.stroke();g.fillStyle=C.ink;g.textAlign='center';g.textBaseline='middle';g.font=`800 40px ${FD}`;g.fillText('김현성',w/2,h/2+3)});
+  mesh(new THREE.PlaneGeometry(.15,.0625),M('#fff',{map:nt,roughness:.5}),body,{x:-.11,y:1.345,z:.312,rx:-.03,cast:false});
+  const pen=new THREE.Group();pen.position.set(.15,1.4,.315);pen.rotation.z=-.12;body.add(pen);
+  mesh(new THREE.CylinderGeometry(.011,.011,.15,10),M('#1F2F52',{roughness:.3}),pen,{});
+  mesh(new THREE.CylinderGeometry(.012,.012,.03,10),gold,pen,{y:.06});
+  mesh(new THREE.BoxGeometry(.006,.07,.006),gold,pen,{y:.03,z:.012});
+  const tw=tex(64,256,(g,w,h)=>{g.fillStyle='#FBF6EC';g.fillRect(0,0,w,h);for(let y=20;y<h;y+=56){g.fillStyle=C.coral;g.fillRect(0,y,w,8);g.fillStyle=C.teal;g.fillRect(0,y+12,w,3)}});
+  const twM=M('#fff',{map:tw,roughness:.95});
+  const towel=new THREE.Group();towel.position.set(.29,1.58,0);towel.rotation.z=-.15;body.add(towel);
+  mesh(new RoundedBoxGeometry(.13,.02,.3,2,.008),twM,towel,{});
+  mesh(new RoundedBoxGeometry(.13,.28,.02,2,.008),twM,towel,{y:-.14,z:.15,rx:-.12});
+  mesh(new RoundedBoxGeometry(.13,.24,.02,2,.008),twM,towel,{y:-.12,z:-.15,rx:.12});
   // 머리
   const head=new THREE.Group();head.position.y=1.63;body.add(head);
   mesh(new THREE.CylinderGeometry(.09,.1,.12,16),skin,head,{y:.03});
