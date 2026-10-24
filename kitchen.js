@@ -588,28 +588,44 @@ function buildChef(){
   const torso=mesh(new THREE.CapsuleGeometry(.31,.36,8,24),navy,body,{y:1.18,s:[1,1,.85]});
   // 셔츠 깃과 넥타이
   mesh(new THREE.CylinderGeometry(.12,.14,.1,20),shirt,body,{y:1.6});
-  mesh(new THREE.BoxGeometry(.17,.38,.01),shirt,body,{y:1.37,z:.27,rx:-.05});
+  mesh(new THREE.BoxGeometry(.17,.2,.01),shirt,body,{y:1.45,z:.262,rx:-.2});
   [-1,1].forEach(s=>mesh(new THREE.ConeGeometry(.045,.1,3),shirt,body,{x:s*.05,y:1.57,z:.19,rx:Math.PI*.85,rz:s*.55}));
   const tt=tex(64,256,(g,w,h)=>{g.fillStyle='#24345A';g.fillRect(0,0,w,h);g.save();g.rotate(-.6);for(let y=-60;y<h+60;y+=34){g.fillStyle='#B2333A';g.fillRect(-80,y,240,9);g.fillStyle='#F2EEE6';g.fillRect(-80,y+11,240,3)}g.restore()});
   const tieM=M('#fff',{map:tt,roughness:.55});
   mesh(new THREE.BoxGeometry(.055,.05,.03),tieM,body,{y:1.52,z:.25,rx:-.4});
-  mesh(new THREE.BoxGeometry(.06,.32,.012),tieM,body,{y:1.34,z:.281,rx:-.05});
-  mesh(new THREE.CylinderGeometry(.043,.043,.012,4,1),tieM,body,{y:1.18,z:.282,rx:Math.PI/2,ry:Math.PI/4});
+  mesh(new THREE.BoxGeometry(.06,.18,.012),tieM,body,{y:1.42,z:.275,rx:-.15});
   // 재킷 깃
-  [-1,1].forEach(s=>mesh(new THREE.BoxGeometry(.08,.34,.02),navyD,body,{x:s*.125,y:1.4,z:.276,rz:s*.28,rx:-.1}));
-  // 앞치마
-  const at=tex(256,320,(g,w,h)=>{g.fillStyle='#F7F1E4';g.fillRect(0,0,w,h);g.fillStyle='rgba(19,107,102,.07)';for(let i=0;i<h;i+=8)g.fillRect(0,i,w,2);g.fillStyle=C.teal;g.textAlign='center';g.textBaseline='middle';g.font=`800 50px ${FD}`;g.fillText('정책',w/2,92);g.fillText('셰프',w/2,152);g.fillStyle=C.coral;g.font=`600 26px ${FD}`;g.fillText('뜻·땀·때',w/2,204);g.strokeStyle='rgba(19,107,102,.35)';g.lineWidth=4;rr(g,58,238,140,56,10);g.stroke()});
+  [-1,1].forEach(s=>mesh(new THREE.BoxGeometry(.07,.2,.02),navyD,body,{x:s*.115,y:1.5,z:.25,rz:s*.35,rx:-.3}));
+  // 가슴까지 오는 앞치마와 정책셰프 로고
+  const at=tex(256,400,(g,w,h)=>{
+    g.fillStyle='#F7F1E4';g.fillRect(0,0,w,h);g.fillStyle='rgba(19,107,102,.06)';for(let i=0;i<h;i+=8)g.fillRect(0,i,w,2);
+    g.strokeStyle=C.teal;g.lineWidth=6;rr(g,10,10,w-20,h-20,18);g.stroke();
+    g.fillStyle=C.teal;g.beginPath();g.arc(w/2,92,56,0,7);g.fill();
+    g.strokeStyle='#F7F1E4';g.lineWidth=7;g.lineCap='round';g.beginPath();g.moveTo(w/2+22,52);g.lineTo(w/2-4,100);g.stroke();
+    g.fillStyle='#F7F1E4';g.beginPath();g.arc(w/2-12,112,20,0,7);g.fill();
+    [[C.coral,-30],[C.amber,0],['#9BE3D6',30]].forEach(([c,dx])=>{g.fillStyle=c;g.beginPath();g.arc(w/2+dx+6,66-Math.abs(dx)*.2-20,7,0,7);g.fill()});
+    g.fillStyle=C.teal;g.textAlign='center';g.textBaseline='middle';g.font=`800 46px ${FD}`;g.fillText('정책셰프',w/2,190);
+    g.fillStyle=C.coral;g.font=`600 26px ${FD}`;g.fillText('뜻 · 땀 · 때',w/2,236);
+    g.strokeStyle='rgba(19,107,102,.4)';g.lineWidth=4;rr(g,56,286,144,70,10);g.stroke();
+  });
   const apM=M('#F7F1E4',{roughness:.85});
-  mesh(new THREE.BoxGeometry(.5,.46,.02),[apM,apM,apM,apM,M('#fff',{map:at,roughness:.85}),apM],body,{y:.88,z:.28,rx:-.04});
-  mesh(new THREE.TorusGeometry(.3,.014,6,32),apM,body,{y:1.1,rx:Math.PI/2,s:[1,.86,1]});
-    // 단추
-  [1.24,1.36].forEach(y=>[-1,1].forEach(s=>mesh(new THREE.SphereGeometry(.017,10,8),gold,body,{x:s*.2,y,z:.22,cast:false})));
+  mesh(new THREE.BoxGeometry(.46,.8,.02),[apM,apM,apM,apM,M('#fff',{map:at,roughness:.85}),apM],body,{y:1.02,z:.3,rx:-.03});
+  [-1,1].forEach(s=>mesh(new THREE.BoxGeometry(.035,.3,.015),apM,body,{x:s*.165,y:1.52,z:.235,rz:s*.3,rx:-.45}));
+  mesh(new THREE.TorusGeometry(.3,.013,6,32),apM,body,{y:.98,rx:Math.PI/2,s:[1.02,.9,1]});
   // 머리
   const head=new THREE.Group();head.position.y=1.63;body.add(head);
   mesh(new THREE.CylinderGeometry(.09,.1,.12,16),skin,head,{y:.03});
-  mesh(new THREE.SphereGeometry(.28,40,30),skin,head,{y:.31,s:[1.06,1.04,.95]});
-  mesh(new THREE.SphereGeometry(.24,32,20),skin,head,{y:.2,z:.01,s:[1.12,.8,.92]}); // 넓은 턱과 볼
-  [-1,1].forEach(s=>mesh(new THREE.SphereGeometry(.06,16,12),skin,head,{x:s*.295,y:.3,s:[.55,1,1]}));
+  const fg=new THREE.SphereGeometry(.28,56,40),fp=fg.attributes.position;
+  for(let i=0;i<fp.count;i++){
+    let x=fp.getX(i),y=fp.getY(i),z=fp.getZ(i);const t=Math.max(0,-y/.28);
+    x*=1.06*(1+.12*Math.sin(t*Math.PI*.8));y*=y<0?.97:1.04;z*=.95*(1+.04*t);
+    fp.setXYZ(i,x,y,z);
+  }
+  fg.computeVertexNormals();
+  const face=mesh(fg,skin,head,{y:.31});
+  face.updateMatrixWorld();
+  const fray=new THREE.Raycaster(),S=(x,y)=>{fray.set(new THREE.Vector3(x,y,1),new THREE.Vector3(0,0,-1));const h=fray.intersectObject(face)[0];return h?h.point.z:.25};
+  [-1,1].forEach(s=>mesh(new THREE.SphereGeometry(.06,16,12),skin,head,{x:s*.305,y:.3,s:[.55,1,1]}));
   // 풍성하고 물결진 머리: 위로 부풀어 옆으로 넘긴 앞머리
   mesh(new THREE.SphereGeometry(.31,32,20,0,Math.PI*2,0,Math.PI*.5),hair,head,{y:.34,z:-.035,rx:-.3,s:[1.1,1.15,1.06]});
   [[-.16,.52,.12,.11,[1.15,.85,1],.5],[-.04,.56,.15,.11,[1.2,.85,1],.25],[.08,.56,.14,.11,[1.2,.85,1],0],[.19,.5,.1,.1,[1,.9,1],-.4],
@@ -620,23 +636,23 @@ function buildChef(){
   const eyes=[];
   [-1,1].forEach(s=>{
     // 웃는 가는 눈
-    const e=mesh(new THREE.SphereGeometry(.03,16,12),M('#1E1712',{roughness:.3}),head,{x:s*.105,y:.315,z:.262,s:[1.4,.42,.5]});e.userData.sy=.42;eyes.push(e);
+    const e=mesh(new THREE.SphereGeometry(.03,16,12),M('#1E1712',{roughness:.3}),head,{x:s*.105,y:.315,z:S(s*.105,.315)+.002,s:[1.4,.42,.5]});e.userData.sy=.42;eyes.push(e);
     // 금테 동그란 안경
-    mesh(new THREE.TorusGeometry(.085,.0065,8,36),gold,head,{x:s*.105,y:.315,z:.285,cast:false});
+    mesh(new THREE.TorusGeometry(.085,.0065,8,36),gold,head,{x:s*.105,y:.315,z:S(s*.105,.315)+.028,cast:false});
     mesh(new THREE.CylinderGeometry(.005,.005,.27,6),gold,head,{x:s*.205,y:.325,z:.15,rx:Math.PI/2,ry:s*.12,cast:false});
     // 짙고 곧은 눈썹
-    mesh(new RoundedBoxGeometry(.11,.032,.025,2,.01),hair,head,{x:s*.105,y:.425,z:.25,rz:s*.07});
-    mesh(new THREE.SphereGeometry(.045,12,10),M('#F0A08C',{roughness:.9,transparent:true,opacity:.35}),head,{x:s*.19,y:.22,z:.225,s:[1,.7,.3],cast:false});
+    mesh(new RoundedBoxGeometry(.11,.032,.025,2,.01),hair,head,{x:s*.105,y:.425,z:S(s*.105,.425)+.006,rz:s*.07});
+    mesh(new THREE.SphereGeometry(.045,12,10),M('#F0A08C',{roughness:.9,transparent:true,opacity:.28}),head,{x:s*.19,y:.21,z:S(s*.19,.21)-.004,s:[1,.7,.3],cast:false});
   });
-  mesh(new THREE.TorusGeometry(.022,.0055,6,12,Math.PI),gold,head,{y:.325,z:.29,cast:false});
+  mesh(new THREE.TorusGeometry(.022,.0055,6,12,Math.PI),gold,head,{y:.325,z:S(0,.325)+.03,cast:false});
   // 코: 콧대와 둥근 코끝
-  mesh(new THREE.CapsuleGeometry(.022,.05,4,8),skin,head,{y:.29,z:.28,rx:.25});
-  mesh(new THREE.SphereGeometry(.043,16,12),M('#E6B48E',{roughness:.65}),head,{y:.245,z:.295,s:[1.25,.95,1]});
-  [-1,1].forEach(s=>mesh(new THREE.SphereGeometry(.024,10,8),M('#E6B48E',{roughness:.65}),head,{x:s*.04,y:.235,z:.28}));
+  mesh(new THREE.CapsuleGeometry(.022,.05,4,8),skin,head,{y:.29,z:S(0,.29)+.008,rx:.25});
+  mesh(new THREE.SphereGeometry(.043,16,12),M('#E6B48E',{roughness:.65}),head,{y:.245,z:S(0,.245)+.028,s:[1.25,.95,1]});
+  [-1,1].forEach(s=>mesh(new THREE.SphereGeometry(.024,10,8),M('#E6B48E',{roughness:.65}),head,{x:s*.04,y:.235,z:S(s*.04,.235)+.01}));
   // 입: 다문 채 살짝 웃는 입
-  const mouth=new THREE.Group();mouth.position.set(0,.165,.268);head.add(mouth);
+  const mouth=new THREE.Group();mouth.position.set(0,.17,S(0,.17)+.003);head.add(mouth);
   const a=Math.PI*.6;
-  mesh(new THREE.TorusGeometry(.065,.009,8,20,a),M('#9A4A3C'),mouth,{y:.065,rz:-Math.PI/2-a/2,cast:false});
+  mesh(new THREE.TorusGeometry(.065,.008,8,20,a),M('#A0574A'),mouth,{y:.065,rz:-Math.PI/2-a/2,cast:false});
   // 토크 모자: 머리숱 위에 살짝 뒤로 얹는다
   const hat=new THREE.Group();hat.position.set(.02,.7,-.17);hat.rotation.set(-.38,0,-.1);hat.scale.setScalar(.76);head.add(hat);
   mesh(new THREE.CylinderGeometry(.25,.26,.17,32),M('#FBFAF6',{roughness:.78}),hat,{});
