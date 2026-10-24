@@ -465,6 +465,7 @@ textarea.f-field{min-height:130px;resize:vertical}
 
 /* 시장님과 함께한 사진은 흑백으로 */
 img[src*="img/seoul-"],img[src="img/fb-seoul-cheongchaek.jpg"],img[src="img/cert/seoul-damyang-mou-2015.jpg"]{filter:grayscale(1)}
+.row figcaption{overflow-wrap:anywhere}
 
 /* book card */
 .bookcard{display:grid;grid-template-columns:150px 1fr;gap:20px;align-items:start;margin:18px 0;padding:18px;background:var(--paper-2);border-radius:14px}
