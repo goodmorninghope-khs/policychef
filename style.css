@@ -462,3 +462,6 @@ textarea.f-field{min-height:130px;resize:vertical}
 .wall.certs figure{margin:0;min-width:0}
 .wall.certs figcaption{overflow-wrap:anywhere}
 .wall.certs img{aspect-ratio:3/4;object-fit:contain;background:var(--paper-2,#f3f1ec);border:1px solid var(--rule)}
+
+/* 시장님과 함께한 사진은 흑백으로 */
+img[src*="img/seoul-"],img[src="img/fb-seoul-cheongchaek.jpg"],img[src="img/cert/seoul-damyang-mou-2015.jpg"]{filter:grayscale(1)}
