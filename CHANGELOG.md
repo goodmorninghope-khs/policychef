@@ -8,15 +8,16 @@ policychef.vercel.app(김현성 프로필·평전 사이트)의 변경 이력과
   - 첫 저장 2026-10-29: [index](https://web.archive.org/web/20261029053913/https://policychef.vercel.app/) · [archive](https://web.archive.org/web/20261029053938/https://policychef.vercel.app/archive.html) · [question](https://web.archive.org/web/20261029054049/https://policychef.vercel.app/question.html) · [words](https://web.archive.org/web/20261029054104/https://policychef.vercel.app/words.html)
 - **브랜치는 지우지 않습니다.** Claude와 함께 작업한 기록이라 병합 여부와 상관없이 남겨 둡니다.
 - 사진은 본인이 나온 공식 배포 사진을 우선하고, 캡션 끝에 출처 기관을 적습니다.
+- 개인 편지, 건강, 인사검증 같은 사적인 기록은 평전 자료로 따로 보관하되 사이트에는 공개하지 않습니다.
 
 ## 브랜치 안내 (2026-10-29 기준)
 | 브랜치 | 내용 | main 반영 |
 |-|-|-|
-| `claude/amazing-ramanujan-hdzukq` | 3D 정책셰프 캐릭터와 '정책 주방' 페이지(kitchen.html, kitchen.js), 2026.10.24 | 미반영 (공개 여부 결정 대기) |
+| `claude/amazing-ramanujan-hdzukq` | 3D 정책셰프 캐릭터와 '정책 주방' 페이지(kitchen.html, kitchen.js), 2026.10.24 | 공개하지 않음. 완성도를 더 다듬기 전까지 브랜치로 보관 (2026-10-29 결정) |
 | `claude/personal-intro-video-dybo1a` | 30초 소개 영상 제작 소스(intro-video/scenes.py), 2026.10.18 | 완성 영상(video/intro.mp4)만 반영 |
 | `claude/vibrant-heisenberg-c8xpqg` | main과 같음, 2026.10.16 | 차이 없음 |
 | `mureum-lineage` | '물음의 계보' 페이지 첫 판, 2026.10.5 | 반영됨 |
-| `fb-knots` | 물음의 계보에 페이스북에서 찾은 매듭 2개(2017.5, 2017.10), 2026.10.6 | 대부분 반영, 2018 평창·미투 단락 1개 미반영 |
+| `fb-knots` | 물음의 계보에 페이스북에서 찾은 매듭 2개(2017.5, 2017.10), 2026.10.6 | 대부분 반영. 남은 단락 1개는 공개하지 않기로 함 (2026-10-29 결정) |
 | `mureum-published` | 『물음』 인용을 출간본 문장으로 교체, 2026.10.6 | 반영됨 |
 
 ## 커밋 이력 (main, 117건)
