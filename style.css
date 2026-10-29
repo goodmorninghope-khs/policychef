@@ -497,3 +497,4 @@ a.vthumb:hover .vplay,a.vthumb:focus-visible .vplay{background:var(--coral)}
 .vd{font-size:13px;line-height:1.55;color:var(--ink-soft)}
 .vmore{margin:0 0 36px;font-size:13px;color:var(--ink-soft)}
 .vmore a{color:var(--teal);text-underline-offset:3px}
+.now + .wall-note{margin-top:28px}
