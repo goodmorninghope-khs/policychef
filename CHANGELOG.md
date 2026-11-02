@@ -6,11 +6,12 @@ policychef.vercel.app(김현성 프로필·평전 사이트)의 변경 이력과
 - **저장소 백업**: main과 모든 브랜치를 날짜별 zip으로 로컬에 보관합니다.
 - **웹 아카이브**: 주요 페이지(index, archive, question, words)를 Internet Archive(Wayback Machine)에 정기 저장합니다.
   - 첫 저장 2026-10-29: [index](https://web.archive.org/web/20261029053913/https://policychef.vercel.app/) · [archive](https://web.archive.org/web/20261029053938/https://policychef.vercel.app/archive.html) · [question](https://web.archive.org/web/20261029054049/https://policychef.vercel.app/question.html) · [words](https://web.archive.org/web/20261029054104/https://policychef.vercel.app/words.html)
+  - 최근 저장 2026-11-02: [index](https://web.archive.org/web/20261102002658/https://policychef.vercel.app/) · [archive](https://web.archive.org/web/20261102002626/https://policychef.vercel.app/archive.html) · [question](https://web.archive.org/web/20261102002600/https://policychef.vercel.app/question.html) · [words](https://web.archive.org/web/20261102002631/https://policychef.vercel.app/words.html)
 - **브랜치는 지우지 않습니다.** Claude와 함께 작업한 기록이라 병합 여부와 상관없이 남겨 둡니다.
 - 사진은 본인이 나온 공식 배포 사진을 우선하고, 캡션 끝에 출처 기관을 적습니다.
 - 개인 편지, 건강, 인사검증 같은 사적인 기록은 평전 자료로 따로 보관하되 사이트에는 공개하지 않습니다.
 
-## 브랜치 안내 (2026-10-29 기준)
+## 브랜치 안내 (2026-11-02 기준)
 | 브랜치 | 내용 | main 반영 |
 |-|-|-|
 | `claude/amazing-ramanujan-hdzukq` | 3D 정책셰프 캐릭터와 '정책 주방' 페이지(kitchen.html, kitchen.js), 2026.10.24 | 공개하지 않음. 완성도를 더 다듬기 전까지 브랜치로 보관 (2026-10-29 결정) |
@@ -20,9 +21,14 @@ policychef.vercel.app(김현성 프로필·평전 사이트)의 변경 이력과
 | `fb-knots` | 물음의 계보에 페이스북에서 찾은 매듭 2개(2017.5, 2017.10), 2026.10.6 | 대부분 반영. 남은 단락 1개는 공개하지 않기로 함 (2026-10-29 결정) |
 | `mureum-published` | 『물음』 인용을 출간본 문장으로 교체, 2026.10.6 | 반영됨 |
 
-## 커밋 이력 (main, 117건)
+## 커밋 이력 (main, 120건)
+
+### 2026-10-30
+- README: 연계(밸류체인) 절 추가 — policy-media-desk (`e877d1f`)
 
 ### 2026-10-29
+- 변경 기록: 3D 셰프·물음 단락 비공개 결정, 사적 기록 비공개 원칙 추가 (`7ca2eee`)
+- 변경 기록(CHANGELOG) 추가: 보관 원칙, 브랜치 안내, 커밋 이력 117건 (`aa2baff`)
 - 때 섹션 마지막 캡션과 안내 문구 겹침 수정 (`bb86f48`)
 - 영상 섹션 시기별 카드 스타일 추가 (`78b3796`)
 - 영상 섹션에 시기별 영상 8편 추가, 중랑구 특강·소진공 명예이사 위촉식 사진 추가 (`5bd7744`)
