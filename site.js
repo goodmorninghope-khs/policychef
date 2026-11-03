@@ -14,3 +14,24 @@
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.06,rootMargin:'0px 0px -30px 0px'});
   els.forEach(e=>io.observe(e));
 })();
+
+// 첫 화면 사진 넘김: 5초마다 한 장, 움직임 줄이기 설정이면 멈춤
+(()=>{
+  const box=document.querySelector('.hero2-media'); if(!box)return;
+  const imgs=[...box.querySelectorAll('.slides img')], ticks=[...box.querySelectorAll('.ticks i')];
+  const y=box.querySelector('.hero2-cap .y'), t=box.querySelector('.hero2-cap .t');
+  if(imgs.length<2||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  imgs.slice(1).forEach(im=>{im.loading='eager'});
+  let i=0, timer;
+  const show=n=>{
+    imgs[i].classList.remove('on'); ticks[i]&&ticks[i].classList.replace('on','done');
+    i=n%imgs.length;
+    if(i===0)ticks.forEach(k=>k.classList.remove('done','on'));
+    imgs[i].classList.add('on');
+    if(ticks[i]){ticks[i].classList.remove('done');void ticks[i].offsetWidth;ticks[i].classList.add('on')}
+    y.textContent=imgs[i].dataset.y; t.textContent=imgs[i].dataset.cap;
+  };
+  const run=()=>{clearInterval(timer);timer=setInterval(()=>show(i+1),5000)};
+  document.addEventListener('visibilitychange',()=>document.hidden?clearInterval(timer):run());
+  run();
+})();
