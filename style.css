@@ -716,3 +716,6 @@ figcaption{font-size:12.5px}
 .contact-icon{background:var(--coral);color:#fff}
 .contact-card .type-chip span{background:transparent}
 .contact-card .type-chip span:hover{border-color:var(--cream-40);color:var(--cream)}
+
+/* 첫 화면(어두운 배경) 소셜 링크 글씨: 밝은 배경용 --ink 색을 덮어씀 */
+.hero2 .socials a span{color:inherit}
