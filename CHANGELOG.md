@@ -6,12 +6,12 @@ policychef.vercel.app(김현성 프로필·평전 사이트)의 변경 이력과
 - **저장소 백업**: main과 모든 브랜치를 날짜별 zip으로 로컬에 보관합니다.
 - **웹 아카이브**: 주요 페이지(index, archive, question, words)를 Internet Archive(Wayback Machine)에 정기 저장합니다.
   - 첫 저장 2026-10-29: [index](https://web.archive.org/web/20261029053913/https://policychef.vercel.app/) · [archive](https://web.archive.org/web/20261029053938/https://policychef.vercel.app/archive.html) · [question](https://web.archive.org/web/20261029054049/https://policychef.vercel.app/question.html) · [words](https://web.archive.org/web/20261029054104/https://policychef.vercel.app/words.html)
-  - 최근 저장 2026-11-11: [index](https://web.archive.org/web/20261111015438/https://policychef.vercel.app/) · [archive](https://web.archive.org/web/20261111015437/https://policychef.vercel.app/archive.html) · [question](https://web.archive.org/web/20261111015522/https://policychef.vercel.app/question.html) · [words](https://web.archive.org/web/20261111015438/https://policychef.vercel.app/words.html)
+  - 최근 저장 2026-11-15: [index](https://web.archive.org/web/20261115120053/https://policychef.vercel.app/) · [archive](https://web.archive.org/web/20261115120100/https://policychef.vercel.app/archive.html) · [question](https://web.archive.org/web/20261115120059/https://policychef.vercel.app/question.html) · [words](https://web.archive.org/web/20261115120048/https://policychef.vercel.app/words.html)
 - **브랜치는 지우지 않습니다.** Claude와 함께 작업한 기록이라 병합 여부와 상관없이 남겨 둡니다.
 - 사진은 본인이 나온 공식 배포 사진을 우선하고, 캡션 끝에 출처 기관을 적습니다.
 - 개인 편지, 건강, 인사검증 같은 사적인 기록은 평전 자료로 따로 보관하되 사이트에는 공개하지 않습니다.
 
-## 브랜치 안내 (2026-11-11 기준)
+## 브랜치 안내 (2026-11-15 기준)
 | 브랜치 | 내용 | main 반영 |
 |-|-|-|
 | `claude/motionsites-redesign` | 리디자인: 어두운 첫 화면, 현장 사진 6장 넘김, 큰 섹션 머리(MotionSites 스킬). 미리보기 policychef2.vercel.app, 2026.11.3 | 반영됨. 두 사이트를 두번째 버전 기준으로 통합 (2026-11-04 결정, PR #5) |
@@ -22,7 +22,10 @@ policychef.vercel.app(김현성 프로필·평전 사이트)의 변경 이력과
 | `fb-knots` | 물음의 계보에 페이스북에서 찾은 매듭 2개(2017.5, 2017.10), 2026.10.6 | 대부분 반영. 남은 단락 1개는 공개하지 않기로 함 (2026-10-29 결정) |
 | `mureum-published` | 『물음』 인용을 출간본 문장으로 교체, 2026.10.6 | 반영됨 |
 
-## 커밋 이력 (main, 125건)
+## 커밋 이력 (main, 126건)
+
+### 2026-11-11
+- 변경 기록 주간 갱신(2026-11-11): 새 커밋 1건, 웨이백 저장 링크 갱신 (`5c9b145`)
 
 ### 2026-11-04
 - 변경 기록: policychef2 리디자인 main 통합(PR #5), 브랜치 안내·커밋 이력 124건 (`29fb8a6`)
