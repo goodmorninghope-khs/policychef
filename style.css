@@ -60,7 +60,7 @@ section.part{padding-block:64px 8px}
 .recipe{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:10px;font-size:13px}
 .recipe span{color:var(--ink)}
 .recipe i{font-style:normal;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--amber);margin-right:6px}
-.scene.fail h3::after{content:"징비";font-size:11px;font-weight:600;color:var(--coral);border:1px solid var(--coral);border-radius:3px;padding:0 6px;margin-left:10px;vertical-align:3px}
+.scene.fail .fail-tag{display:inline-block;font-size:11px;font-weight:600;color:var(--coral);border:1px solid var(--coral);border-radius:3px;padding:0 6px;margin-left:10px;vertical-align:3px}
 
 /* book */
 .book{display:grid;grid-template-columns:minmax(0,200px) 1fr;gap:36px;align-items:start}
@@ -719,3 +719,6 @@ figcaption{font-size:12.5px}
 
 /* 첫 화면(어두운 배경) 소셜 링크 글씨: 밝은 배경용 --ink 색을 덮어씀 */
 .hero2 .socials a span{color:inherit}
+
+.copy-mail{font:inherit;font-size:12px;color:var(--coral);background:none;border:1px solid var(--coral);border-radius:999px;padding:2px 10px;margin-left:6px;cursor:pointer}
+.copy-mail:hover{background:var(--coral);color:var(--paper)}
